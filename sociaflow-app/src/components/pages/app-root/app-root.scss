@@ -1,15 +1,27 @@
 header {
-  background: #5851ff;
+  background-image: url('../../../assets/images/home-page-container.png');
   color: white;
   height: 56px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 
 h1 {
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #fff;
-  padding: 0 12px;
+  margin: 0;
+  padding: 10px;
+  font-weight: 800;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .socia {
+    font-weight: 500;
+    color: white;
+  }
+
+  .flow {
+    font-weight: 500;
+    color: rgb(181, 251, 221);
+  }
 }

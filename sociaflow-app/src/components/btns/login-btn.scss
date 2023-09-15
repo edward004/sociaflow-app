@@ -1,22 +1,18 @@
 :host {
-    display: block;
-    position: relative;
-    height: 70%;
+  padding-right: 20px;
+}
+
+button {
+  float: right;
+  background-color: rgb(181, 251, 221);
+  border: none;
+  padding: 10px 20px;
+  color: black;
+  border-radius: 20%;
+  cursor: pointer;
+
+  &:hover {
     background-color: rgb(181, 251, 221);
   }
+}
 
-  button {
-    position: relative;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    background-color: rgb(181, 251, 221);
-    border: none;
-    padding: 10px 20px;
-    color: black;
-    cursor: pointer;
-
-    &:hover {
-      background-color: rgb(181, 251, 221);
-    }
-  }

@@ -10,7 +10,7 @@ export class AppRoot {
     return (
       <div>
         <header>
-          <h1>SociaFlow</h1>
+          <h1><span class='socia'>socia</span><span class='flow'>flow</span></h1>
           <login-btn />
         </header>
         <menu-bar />
