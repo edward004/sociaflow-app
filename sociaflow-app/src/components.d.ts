@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { MatchResults } from "@stencil-community/router";
 export namespace Components {
+    interface AboutUsPage {
+    }
     interface AppHome {
     }
     interface AppProfile {
@@ -14,10 +16,20 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface LoginBtn {
+    }
+    interface LoginPage {
+    }
     interface MenuBar {
     }
 }
 declare global {
+    interface HTMLAboutUsPageElement extends Components.AboutUsPage, HTMLStencilElement {
+    }
+    var HTMLAboutUsPageElement: {
+        prototype: HTMLAboutUsPageElement;
+        new (): HTMLAboutUsPageElement;
+    };
     interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
     }
     var HTMLAppHomeElement: {
@@ -36,6 +48,18 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLLoginBtnElement extends Components.LoginBtn, HTMLStencilElement {
+    }
+    var HTMLLoginBtnElement: {
+        prototype: HTMLLoginBtnElement;
+        new (): HTMLLoginBtnElement;
+    };
+    interface HTMLLoginPageElement extends Components.LoginPage, HTMLStencilElement {
+    }
+    var HTMLLoginPageElement: {
+        prototype: HTMLLoginPageElement;
+        new (): HTMLLoginPageElement;
+    };
     interface HTMLMenuBarElement extends Components.MenuBar, HTMLStencilElement {
     }
     var HTMLMenuBarElement: {
@@ -43,13 +67,18 @@ declare global {
         new (): HTMLMenuBarElement;
     };
     interface HTMLElementTagNameMap {
+        "about-us-page": HTMLAboutUsPageElement;
         "app-home": HTMLAppHomeElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "login-btn": HTMLLoginBtnElement;
+        "login-page": HTMLLoginPageElement;
         "menu-bar": HTMLMenuBarElement;
     }
 }
 declare namespace LocalJSX {
+    interface AboutUsPage {
+    }
     interface AppHome {
     }
     interface AppProfile {
@@ -57,12 +86,20 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface LoginBtn {
+        "onLoginClicked"?: (event: CustomEvent<any>) => void;
+    }
+    interface LoginPage {
+    }
     interface MenuBar {
     }
     interface IntrinsicElements {
+        "about-us-page": AboutUsPage;
         "app-home": AppHome;
         "app-profile": AppProfile;
         "app-root": AppRoot;
+        "login-btn": LoginBtn;
+        "login-page": LoginPage;
         "menu-bar": MenuBar;
     }
 }
@@ -70,9 +107,12 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "about-us-page": LocalJSX.AboutUsPage & JSXBase.HTMLAttributes<HTMLAboutUsPageElement>;
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "login-btn": LocalJSX.LoginBtn & JSXBase.HTMLAttributes<HTMLLoginBtnElement>;
+            "login-page": LocalJSX.LoginPage & JSXBase.HTMLAttributes<HTMLLoginPageElement>;
             "menu-bar": LocalJSX.MenuBar & JSXBase.HTMLAttributes<HTMLMenuBarElement>;
         }
     }
