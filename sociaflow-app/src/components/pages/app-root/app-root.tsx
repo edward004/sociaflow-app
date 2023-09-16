@@ -10,7 +10,7 @@ export class AppRoot {
     return (
       <div>
         <header>
-          <hamburger-menu />
+          <hamburger-menu  class="hamburger-menu"/>
           <h1><span class='socia'>socia</span><span class='flow'>flow</span></h1>
           <login-btn />
         </header>

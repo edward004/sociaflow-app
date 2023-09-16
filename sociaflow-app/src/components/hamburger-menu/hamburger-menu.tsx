@@ -26,6 +26,9 @@ export class MenuBar {
             <stencil-route-link url="/packages">
               Packages
             </stencil-route-link>
+            <stencil-route-link url="/about-us">
+              About Us
+            </stencil-route-link>
             <stencil-route-link url="/contact">
               Contact Us
             </stencil-route-link>

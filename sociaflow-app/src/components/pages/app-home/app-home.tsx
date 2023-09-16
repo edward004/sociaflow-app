@@ -13,7 +13,7 @@ export class AppHome {
           <img src="../../../assets/images/home-page-container.png" alt="Description of Image" />
           <div class="overlay-text">
             <h1><span class="socia">socia</span><span class="flow">flow</span></h1>
-            <stencil-route-link url="/about-us/stencil">
+            <stencil-route-link url="/about-us">
               <button class="about-us-button">About Us</button>
             </stencil-route-link>
           </div>

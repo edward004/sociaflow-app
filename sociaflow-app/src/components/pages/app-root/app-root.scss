@@ -8,6 +8,15 @@ header {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   padding-left: 1%;
   padding-right: 1%;
+
+  .hamburger-menu{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    margin: 0;
+  }
 }
 
 h1 {
