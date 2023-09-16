@@ -1,0 +1,66 @@
+.packages-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .package {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    width: calc(33% - 50px); // For larger screens by default
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .packages-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .package {
+      width: 80%;
+    }
+  }
+}

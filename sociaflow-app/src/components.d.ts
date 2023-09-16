@@ -22,6 +22,8 @@ export namespace Components {
     }
     interface MenuBar {
     }
+    interface PackagesPage {
+    }
 }
 declare global {
     interface HTMLAboutUsPageElement extends Components.AboutUsPage, HTMLStencilElement {
@@ -66,6 +68,12 @@ declare global {
         prototype: HTMLMenuBarElement;
         new (): HTMLMenuBarElement;
     };
+    interface HTMLPackagesPageElement extends Components.PackagesPage, HTMLStencilElement {
+    }
+    var HTMLPackagesPageElement: {
+        prototype: HTMLPackagesPageElement;
+        new (): HTMLPackagesPageElement;
+    };
     interface HTMLElementTagNameMap {
         "about-us-page": HTMLAboutUsPageElement;
         "app-home": HTMLAppHomeElement;
@@ -74,6 +82,7 @@ declare global {
         "login-btn": HTMLLoginBtnElement;
         "login-page": HTMLLoginPageElement;
         "menu-bar": HTMLMenuBarElement;
+        "packages-page": HTMLPackagesPageElement;
     }
 }
 declare namespace LocalJSX {
@@ -93,6 +102,8 @@ declare namespace LocalJSX {
     }
     interface MenuBar {
     }
+    interface PackagesPage {
+    }
     interface IntrinsicElements {
         "about-us-page": AboutUsPage;
         "app-home": AppHome;
@@ -101,6 +112,7 @@ declare namespace LocalJSX {
         "login-btn": LoginBtn;
         "login-page": LoginPage;
         "menu-bar": MenuBar;
+        "packages-page": PackagesPage;
     }
 }
 export { LocalJSX as JSX };
@@ -114,6 +126,7 @@ declare module "@stencil/core" {
             "login-btn": LocalJSX.LoginBtn & JSXBase.HTMLAttributes<HTMLLoginBtnElement>;
             "login-page": LocalJSX.LoginPage & JSXBase.HTMLAttributes<HTMLLoginPageElement>;
             "menu-bar": LocalJSX.MenuBar & JSXBase.HTMLAttributes<HTMLMenuBarElement>;
+            "packages-page": LocalJSX.PackagesPage & JSXBase.HTMLAttributes<HTMLPackagesPageElement>;
         }
     }
 }
