@@ -6,6 +6,8 @@ header {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  padding-left: 1%;
+  padding-right: 1%;
 }
 
 h1 {
@@ -23,5 +25,25 @@ h1 {
   .flow {
     font-weight: 500;
     color: rgb(181, 251, 221);
+  }
+}
+
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+
+  .left-content {
+    flex: 1;
+    padding-right: 10px;
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  .right-content {
+    flex: 1;
+    padding-left: 10px;
   }
 }
