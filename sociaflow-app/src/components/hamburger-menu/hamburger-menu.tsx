@@ -15,9 +15,11 @@ export class MenuBar {
   render() {
     return (
       <div>
-        <button onClick={() => this.toggleMenu()}>☰ Menu</button>
+        <div class="menu-button" onClick={() => this.toggleMenu()}>
+          ☰ Menu
+        </div>
         {this.showMenu && (
-          <div class="menu">
+          <div class={`menu ${this.showMenu ? 'show' : ''}`}>
             <stencil-route-link url="/">
               Home
             </stencil-route-link>
