@@ -29,7 +29,7 @@ export class MenuBar {
             <stencil-route-link url="/about-us">
               About Us
             </stencil-route-link>
-            <stencil-route-link url="/contact">
+            <stencil-route-link url="/contact-us">
               Contact Us
             </stencil-route-link>
           </div>

@@ -25,6 +25,7 @@ export class AppRoot {
               <stencil-route url="/login" component='login-page' />
               <stencil-route url="/about-us" component='about-us-page' />
               <stencil-route url="/packages" component='packages-page' />
+              <stencil-route url="/contact-us" component='contact-us-page' />
             </stencil-route-switch>
           </stencil-router>
         </main>

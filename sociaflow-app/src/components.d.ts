@@ -16,6 +16,8 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface ContactUsPage {
+    }
     interface HamburgerMenu {
     }
     interface LoginBtn {
@@ -50,6 +52,12 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLContactUsPageElement extends Components.ContactUsPage, HTMLStencilElement {
+    }
+    var HTMLContactUsPageElement: {
+        prototype: HTMLContactUsPageElement;
+        new (): HTMLContactUsPageElement;
+    };
     interface HTMLHamburgerMenuElement extends Components.HamburgerMenu, HTMLStencilElement {
     }
     var HTMLHamburgerMenuElement: {
@@ -79,6 +87,7 @@ declare global {
         "app-home": HTMLAppHomeElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "contact-us-page": HTMLContactUsPageElement;
         "hamburger-menu": HTMLHamburgerMenuElement;
         "login-btn": HTMLLoginBtnElement;
         "login-page": HTMLLoginPageElement;
@@ -95,6 +104,8 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface ContactUsPage {
+    }
     interface HamburgerMenu {
     }
     interface LoginBtn {
@@ -109,6 +120,7 @@ declare namespace LocalJSX {
         "app-home": AppHome;
         "app-profile": AppProfile;
         "app-root": AppRoot;
+        "contact-us-page": ContactUsPage;
         "hamburger-menu": HamburgerMenu;
         "login-btn": LoginBtn;
         "login-page": LoginPage;
@@ -123,6 +135,7 @@ declare module "@stencil/core" {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "contact-us-page": LocalJSX.ContactUsPage & JSXBase.HTMLAttributes<HTMLContactUsPageElement>;
             "hamburger-menu": LocalJSX.HamburgerMenu & JSXBase.HTMLAttributes<HTMLHamburgerMenuElement>;
             "login-btn": LocalJSX.LoginBtn & JSXBase.HTMLAttributes<HTMLLoginBtnElement>;
             "login-page": LocalJSX.LoginPage & JSXBase.HTMLAttributes<HTMLLoginPageElement>;
