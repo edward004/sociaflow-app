@@ -7,6 +7,31 @@ import { Component, h, State } from '@stencil/core';
 })
 export class MenuBar {
   @State() showMenu = false;
+  menuRef: HTMLElement;
+
+  componentDidLoad() {
+    document.addEventListener('mousemove', this.handleMouseMove.bind(this));
+  }
+
+  disconnectedCallback() {
+    document.removeEventListener('mousemove', this.handleMouseMove.bind(this));
+  }
+
+  handleMouseMove(event: MouseEvent) {
+    if (!this.menuRef) return;
+
+    const rect = this.menuRef.getBoundingClientRect();
+    const buffer = 50; // distance in pixels to consider "too far"
+
+    if (
+      event.clientX < rect.left - buffer ||
+      event.clientX > rect.right + buffer ||
+      event.clientY < rect.top - buffer ||
+      event.clientY > rect.bottom + buffer
+    ) {
+      this.showMenu = false;
+    }
+  }
 
   toggleMenu() {
     this.showMenu = !this.showMenu;
@@ -19,7 +44,7 @@ export class MenuBar {
           ☰ Menu
         </div>
         {this.showMenu && (
-          <div class={`menu ${this.showMenu ? 'show' : ''}`}>
+          <div class={`menu ${this.showMenu ? 'show' : ''}`} ref={(el) => this.menuRef = el as HTMLElement}>
             <stencil-route-link url="/">
               Home
             </stencil-route-link>
