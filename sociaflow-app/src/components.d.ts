@@ -16,11 +16,11 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface HamburgerMenu {
+    }
     interface LoginBtn {
     }
     interface LoginPage {
-    }
-    interface MenuBar {
     }
     interface PackagesPage {
     }
@@ -50,6 +50,12 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLHamburgerMenuElement extends Components.HamburgerMenu, HTMLStencilElement {
+    }
+    var HTMLHamburgerMenuElement: {
+        prototype: HTMLHamburgerMenuElement;
+        new (): HTMLHamburgerMenuElement;
+    };
     interface HTMLLoginBtnElement extends Components.LoginBtn, HTMLStencilElement {
     }
     var HTMLLoginBtnElement: {
@@ -62,12 +68,6 @@ declare global {
         prototype: HTMLLoginPageElement;
         new (): HTMLLoginPageElement;
     };
-    interface HTMLMenuBarElement extends Components.MenuBar, HTMLStencilElement {
-    }
-    var HTMLMenuBarElement: {
-        prototype: HTMLMenuBarElement;
-        new (): HTMLMenuBarElement;
-    };
     interface HTMLPackagesPageElement extends Components.PackagesPage, HTMLStencilElement {
     }
     var HTMLPackagesPageElement: {
@@ -79,9 +79,9 @@ declare global {
         "app-home": HTMLAppHomeElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "hamburger-menu": HTMLHamburgerMenuElement;
         "login-btn": HTMLLoginBtnElement;
         "login-page": HTMLLoginPageElement;
-        "menu-bar": HTMLMenuBarElement;
         "packages-page": HTMLPackagesPageElement;
     }
 }
@@ -95,12 +95,12 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface HamburgerMenu {
+    }
     interface LoginBtn {
         "onLoginClicked"?: (event: CustomEvent<any>) => void;
     }
     interface LoginPage {
-    }
-    interface MenuBar {
     }
     interface PackagesPage {
     }
@@ -109,9 +109,9 @@ declare namespace LocalJSX {
         "app-home": AppHome;
         "app-profile": AppProfile;
         "app-root": AppRoot;
+        "hamburger-menu": HamburgerMenu;
         "login-btn": LoginBtn;
         "login-page": LoginPage;
-        "menu-bar": MenuBar;
         "packages-page": PackagesPage;
     }
 }
@@ -123,9 +123,9 @@ declare module "@stencil/core" {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "hamburger-menu": LocalJSX.HamburgerMenu & JSXBase.HTMLAttributes<HTMLHamburgerMenuElement>;
             "login-btn": LocalJSX.LoginBtn & JSXBase.HTMLAttributes<HTMLLoginBtnElement>;
             "login-page": LocalJSX.LoginPage & JSXBase.HTMLAttributes<HTMLLoginPageElement>;
-            "menu-bar": LocalJSX.MenuBar & JSXBase.HTMLAttributes<HTMLMenuBarElement>;
             "packages-page": LocalJSX.PackagesPage & JSXBase.HTMLAttributes<HTMLPackagesPageElement>;
         }
     }
