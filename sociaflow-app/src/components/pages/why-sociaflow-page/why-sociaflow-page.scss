@@ -1,0 +1,66 @@
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  .left-content, .right-content {
+    flex: 1;
+    padding: 0 10px;
+  }
+  .left-content {
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .contact-us-button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+
+
+.why-sociaflow-page {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+
+  h1 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1em;
+    margin-bottom: 30px;
+    color: #555;
+  }
+
+  .bullet-points {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+
+    div {
+      flex-basis: calc(50% - 50px);
+      margin-bottom: 20px;
+      background-color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+      &:nth-child(odd) {
+        margin-right: 20px;
+      }
+    }
+  }
+}

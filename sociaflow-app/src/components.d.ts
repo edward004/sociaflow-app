@@ -26,6 +26,8 @@ export namespace Components {
     }
     interface ProfileMenu {
     }
+    interface WhySociaflowPage {
+    }
 }
 declare global {
     interface HTMLAboutUsPageElement extends Components.AboutUsPage, HTMLStencilElement {
@@ -82,6 +84,12 @@ declare global {
         prototype: HTMLProfileMenuElement;
         new (): HTMLProfileMenuElement;
     };
+    interface HTMLWhySociaflowPageElement extends Components.WhySociaflowPage, HTMLStencilElement {
+    }
+    var HTMLWhySociaflowPageElement: {
+        prototype: HTMLWhySociaflowPageElement;
+        new (): HTMLWhySociaflowPageElement;
+    };
     interface HTMLElementTagNameMap {
         "about-us-page": HTMLAboutUsPageElement;
         "app-home": HTMLAppHomeElement;
@@ -92,6 +100,7 @@ declare global {
         "login-page": HTMLLoginPageElement;
         "packages-page": HTMLPackagesPageElement;
         "profile-menu": HTMLProfileMenuElement;
+        "why-sociaflow-page": HTMLWhySociaflowPageElement;
     }
 }
 declare namespace LocalJSX {
@@ -115,6 +124,8 @@ declare namespace LocalJSX {
     interface ProfileMenu {
         "onLoginClicked"?: (event: CustomEvent<any>) => void;
     }
+    interface WhySociaflowPage {
+    }
     interface IntrinsicElements {
         "about-us-page": AboutUsPage;
         "app-home": AppHome;
@@ -125,6 +136,7 @@ declare namespace LocalJSX {
         "login-page": LoginPage;
         "packages-page": PackagesPage;
         "profile-menu": ProfileMenu;
+        "why-sociaflow-page": WhySociaflowPage;
     }
 }
 export { LocalJSX as JSX };
@@ -140,6 +152,7 @@ declare module "@stencil/core" {
             "login-page": LocalJSX.LoginPage & JSXBase.HTMLAttributes<HTMLLoginPageElement>;
             "packages-page": LocalJSX.PackagesPage & JSXBase.HTMLAttributes<HTMLPackagesPageElement>;
             "profile-menu": LocalJSX.ProfileMenu & JSXBase.HTMLAttributes<HTMLProfileMenuElement>;
+            "why-sociaflow-page": LocalJSX.WhySociaflowPage & JSXBase.HTMLAttributes<HTMLWhySociaflowPageElement>;
         }
     }
 }

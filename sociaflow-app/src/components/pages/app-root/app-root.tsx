@@ -15,9 +15,9 @@ export class AppRoot {
           </stencil-route-link>
           <div class="header-right">
             <div class="nav-links">
-              <a href="#packages-section">Packages</a>
-              <a href="#why-sociaflow-section">Why sociaflow?</a>
-              <a href="#about-us-section">About us</a>
+              <a href="/#packages-section">Packages</a>
+              <a href="/#why-sociaflow-section">Why sociaflow?</a>
+              <a href="/#about-us-section">About us</a>
             </div>
             <profile-menu />
           </div>
