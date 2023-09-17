@@ -10,7 +10,9 @@ export class AppRoot {
     return (
       <div>
         <header>
-          <img src="../../../assets/images/sociaflow-logo.png" alt="sociaflow" />
+          <stencil-route-link url="/">
+            <img src="../../../assets/images/sociaflow-logo.png" alt="sociaflow" />
+          </stencil-route-link>
           <div class="header-right">
             <div class="nav-links">
               <a href="#packages-section">Packages</a>

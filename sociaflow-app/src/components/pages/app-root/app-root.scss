@@ -1,10 +1,10 @@
 @font-face {
-	font-family: 'TildaSansLight';
-	src: url('../../../assets/fonts/TildaSans-Light.eot');
+	font-family: 'TildaSans,Arial,sans-serif';
+	src: url('../../../assets/fonts/TildaSans-Light/TildaSans-Light/TildaSans-Light.eot');
 	src:
-	     url('../../../assets/fonts/TildaSans-Light.eot?#iefix') format('embedded-opentype'),
-	     url('../../../assets/fonts/TildaSans-Light.woff2') format('woff2'),
-	     url('../../../assets/fonts/TildaSans-Light.woff') format('woff');
+	     url('../../../assets/fonts/TildaSans-Light/TildaSans-Light/TildaSans-Light.eot?#iefix') format('embedded-opentype'),
+	     url('../../../assets/fonts/TildaSans-Light/TildaSans-Light/TildaSans-Light.woff2') format('woff2'),
+	     url('../../../assets/fonts/TildaSans-Light/TildaSans-Light/TildaSans-Light.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -27,6 +27,7 @@ header {
   .header-right {
     display: flex;
     align-items: center;
+    font-family: 'TildaSans,Arial,sans-serif';
 
     .nav-links {
       display: flex;
@@ -52,22 +53,4 @@ header {
   }
 }
 
-.content-section {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
 
-  .left-content {
-    flex: 1;
-    padding-right: 10px;
-    h2 {
-      font-size: 24px;
-      font-weight: bold;
-    }
-  }
-
-  .right-content {
-    flex: 1;
-    padding-left: 10px;
-  }
-}
