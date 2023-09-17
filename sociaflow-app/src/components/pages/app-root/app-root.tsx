@@ -10,12 +10,16 @@ export class AppRoot {
     return (
       <div>
         <header>
-          <hamburger-menu  class="hamburger-menu"/>
-          <h1><span class='socia'>socia</span><span class='flow'>flow</span></h1>
-          <login-btn />
+          <img src="../../../assets/images/sociaflow-logo.png" alt="sociaflow" />
+          <div class="header-right">
+            <div class="nav-links">
+              <a href="#packages-section">Packages</a>
+              <a href="#why-sociaflow-section">Why sociaflow?</a>
+              <a href="#about-us-section">About Us</a>
+            </div>
+            <login-btn />
+          </div>
         </header>
-
-
 
         <main>
           <stencil-router>

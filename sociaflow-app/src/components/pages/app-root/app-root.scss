@@ -1,39 +1,54 @@
+@font-face {
+	font-family: 'TildaSansLight';
+	src: url('../../../assets/fonts/TildaSans-Light.eot');
+	src:
+	     url('../../../assets/fonts/TildaSans-Light.eot?#iefix') format('embedded-opentype'),
+	     url('../../../assets/fonts/TildaSans-Light.woff2') format('woff2'),
+	     url('../../../assets/fonts/TildaSans-Light.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 header {
-  background-image: url('../../../assets/images/home-page-container.png');
   color: white;
-  height: 56px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 0.75%;
+  padding-right: 0.75%;
 
-  .hamburger-menu{
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: white;
-    margin: 0;
-  }
-}
-
-h1 {
-  margin: 0;
-  padding: 10px;
-  font-weight: 800;
-  font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-
-  .socia {
-    font-weight: 500;
-    color: white;
+  img {
+    height: 21px;
+    width: auto;
+    margin-left: 10px;
   }
 
-  .flow {
-    font-weight: 500;
-    color: rgb(181, 251, 221);
+  .header-right {
+    display: flex;
+    align-items: center;
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      font-family: 'TildaSansLight';
+      font-weight: 400;
+
+      a {
+        color: black;
+        text-decoration: none;
+        font-size: 14px;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    login-btn {
+      margin-left: 20px;
+    }
   }
 }
 

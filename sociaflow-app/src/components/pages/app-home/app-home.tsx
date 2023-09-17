@@ -19,6 +19,16 @@ export class AppHome {
           </div>
         </div>
 
+        <div id="packages-section">
+        </div>
+
+        <div id="why-sociaflow-section">
+        </div>
+
+        <div id="about-us-section">
+        </div>
+
+
         <div class="content-section">
           <div class="left-content">
             <h2>Let us boost your online presence while you focus on your business</h2>
