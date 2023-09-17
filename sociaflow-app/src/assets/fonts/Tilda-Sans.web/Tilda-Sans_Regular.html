@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  
+<!--
+These webfonts were purchased at www.ParaType.com
+You can purchase them too. Please don't steal them.
+
+Please don't remove this notice. Thanks.
+-->	
+	<title>Font Face Demo</title>
+	<link rel="stylesheet" href="Tilda-Sans_Regular.css" type="text/css" charset="utf-8">
+	<style type="text/css" media="screen">
+		body {font-family: Helvetica, Arial, sans-serif; color:#333333;}
+		.TildaSansWebRegular {
+			font-family: 'TildaSansWebRegular';
+			font-weight: normal;
+			font-style: normal;
+			color:#000000;
+		}
+
+		.caption {
+			font-size: 18px;
+			color:#666666;
+		}
+		.FontName {
+			font-size: 60px;
+		}
+		.CopyrightFont {
+			font-size: 10px;
+		}
+		#container {
+			width: 900px;
+			margin-left: auto;
+			margin-right: auto;
+			overflow: none;
+		}
+		.samplebox {
+			white-space:wrap;
+			margin-top:10px;
+			margin-bottom: 0px;
+		}
+		.features {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.feature {
+			height: 42px;
+			width: 42px;
+			cursor: pointer;
+			margin: 2px;
+			border-radius: 15%;
+			background-color: #DCDCDC;
+			border: none;
+		}
+		.active{
+			background-color: #808080;			
+		}
+		
+		
+	</style>
+<script type="text/javascript">
+		fsize = 24
+		window.onload = function(){ active('kern')};
+function less()
+{
+	if (fsize > 2) {	
+		fsize = fsize-1;
+		p = document.getElementById('sample');
+		p.style.fontSize = fsize + "px";
+		document.getElementById('stext').value = fsize + "px";
+	}
+}	
+
+function more()
+{
+	if (fsize < 100) {	
+		fsize = fsize+1;
+		setSize ()
+	}
+}	
+
+function setSize ()
+{
+	p = document.getElementById('sample');
+	document.getElementById('sample-text').style.fontSize = "28px";
+	p.style.fontSize = fsize + "px";
+	document.getElementById('stext').value = fsize + "px";
+}
+
+function changeFSize()
+{
+	tsize = document.getElementById('stext').value;
+	fsize = parseInt (tsize);
+	setSize ();
+	return false;
+}
+function active(value)
+{
+	const button = document.getElementById(value); 	
+	const allFeatures = document.querySelectorAll(".features button");
+	button.classList.toggle('active');	
+	let features = "";
+	for(let i = 0; i < allFeatures.length; i ++){
+		features += "'" + allFeatures[i].id + "'" + " ";
+		if(allFeatures[i].classList.contains("active")){
+			features += "1";
+		}
+		else { features += "0"}
+		
+		if(i+1 !== allFeatures.length) {
+			features += ",";	
+		}
+	}	
+	let sample = document.getElementById('sample');
+	let sampleText = document.getElementById('sample-text');
+	let styles = "font-feature-settings:" + features + ";";
+	sample.setAttribute("style", styles);
+	sampleText.setAttribute("style", styles);	
+	setSize();
+}
+</script>	
+</head>
+<body>
+	<div id="container">
+<p class="caption">
+Font: <br>
+
+<span class="TildaSansWebRegular samplebox" style="font-size:60px; color:#990000">
+Tilda Sans Regular</span></p>
+
+<p class="caption">
+Sample Text:</p>
+<p id="sample-text" class="TildaSansWebRegular samplebox" style="font-size:28px">
+Jelly-like above the high wire, six quaking pachyderms kept the climax of the extravaganza in a dazzling state of flux.<br>Юный директор целиком сжевал весь объём продукции фундука (товара дефицитного и деликатесного), идя энергично через хрустящий камыш.</p>
+
+<p class="caption">
+<div>
+	<div>
+		<form onsubmit="return changeFSize();">
+		Character Set: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" value="-" onClick="less()"> &nbsp;&nbsp;<input id="stext" type="text" value="24px" style="width:40px"> &nbsp;&nbsp;<input type="button" value="+" onClick="more()"></p>
+		</form>
+		<p id="sample" class="TildaSansWebRegular samplebox" style="font-size:24px;">
+			   A Á Ă Â Ä À Ā Ą Å Ã Æ B C Ć Č Ç Ĉ Ċ D Ð Ď Đ E É Ĕ Ě Ê Ë Ė È Ē Ę F G Ğ Ĝ Ģ Ġ H Ħ Ĥ I Í Ĭ Î Ï İ Ì Ī Į Ĩ J Ĵ K Ķ L Ĺ Ľ Ļ Ŀ Ł M N Ń Ň Ņ Ŋ Ñ O Ó Ŏ Ô Ö Ò Ő Ō Ø Õ Œ P Þ Q R Ŕ Ř Ŗ S Ś Š Ş Ŝ Ș ẞ Ə T Ŧ Ť Ţ Ț U Ú Ŭ Û Ü Ù Ű Ū Ų Ů Ũ V W Ẃ Ŵ Ẅ Ẁ X Y Ý Ŷ Ÿ Ỳ Z Ź Ž Ż a á ă â ä à ā ą å ã æ b c ć č ç ĉ ċ d ð ď đ e é ĕ ě ê ë ė è ē ę ǝ ə f g ğ ĝ ģ ġ h ħ ĥ i ı í ĭ î ï ì ī į ĩ j ȷ ĵ k ķ l ĺ ľ ļ ŀ ł m n ń ň ņ ŋ ñ o ó ŏ ô ö ò ő ō ø õ œ p þ q r ŕ ř ŗ s ś š ş ŝ ș ß t ŧ ť ţ ț u ú ŭ û ü ù ű ū ų ů ũ v w ẃ ŵ ẅ ẁ x y ý ŷ ÿ ỳ z ź ž ż ﬀ ﬃ ﬄ ﬁ ﬂ ª º А Б В Г Ѓ Ґ Д Е Ѐ Ё Ж З И Й К Ќ Л М Н О П Р С Т У Ў Ф Х Ч Ц Ш Щ Џ Ь Ъ Ы Љ Њ Ѕ Є Э І Ї Ј Ћ Ю Я Ђ Ѣ Ѳ Ѵ Ғ Җ Ҙ Қ Ҡ Ң Ҫ Ү Ұ Ҳ Ҷ Һ Ӏ Ӑ Ӗ Ә Ӝ Ӟ Ӣ Ӥ Ӧ Ө Ӯ Ӳ Ӵ а б в г ѓ ґ д е ѐ ё ж з и й ѝ к ќ л м н о п р с т у ў ф х ч ц ш щ џ ь ъ ы љ њ ѕ є э і ї ј ћ ю я ђ ѣ ѳ ѵ ғ җ ҙ қ ҡ ң ҫ ү ұ ҳ ҷ һ ӏ ӑ ӗ ә ӝ ӟ ӣ ӥ ӧ ө ӯ ӳ ӵ μ π 0 1 2 3 4 5 6 7 8 9 ¹ ² ³ ⁄ ½ ⅓ ⅔ ¼ ¾ ⅛ ⅜ ⅝ ⅞ . , : ; … ! ¡ ? ¿ · • * # / \ ( ) { } [ ] - ­ – — _ ‚ „ “ ” ‘ ’ « » ‹ › " '                           ​ ‍ ‌ ¢ ¤ $ € ₴ ₽ £ ₸ ¥ + − × ÷ = ≠ > < ≥ ≤ ± ≈ ~ ¬ ^ ∞ Ω ∆ µ % ‰ ◊ @ & ¶ § © ® ™ ° | ¦ † ‡ № ℠ ʼ ̈ ̇ ̀ ́ ̋ ̂ ̌ ̆ ̊ ̃ ̄ ̒ ̦ ̧ ̨ ̵ ¨ ˙ ` ´ ˝ ˆ ˇ ˘ ˚ ˜ ¯ ¸ ˛ 
+		</p>
+	</div>
+	<div class="features">
+	<p>OpenType features:</p><button id='liga' class='feature' onclick=active('liga') title='Standard Ligatures'>liga</button><button id='dlig' class='feature' onclick=active('dlig') title='Discretionary Ligatures'>dlig</button><button id='aalt' class='feature' onclick=active('aalt') title='Access All Alternates'>aalt</button><button id='calt' class='feature' onclick=active('calt') title='Contextual Alternates'>calt</button><button id='salt' class='feature' onclick=active('salt') title='Stylistic Alternates'>salt</button><button id='case' class='feature' onclick=active('case') title='Case-Sensitive Forms'>case</button><button id='ordn' class='feature' onclick=active('ordn') title='Ordinals'>ordn</button><button id='locl' class='feature' onclick=active('locl') title='Localized Forms'>locl</button><button id='ss01' class='feature' onclick=active('ss01') title='Stylistic Set 1'>ss01</button><button id='ss02' class='feature' onclick=active('ss02') title='Stylistic Set 2'>ss02</button><button id='sups' class='feature' onclick=active('sups') title='Superscript'>sups</button><button id='numr' class='feature' onclick=active('numr') title='Numerators'>numr</button><button id='dnom' class='feature' onclick=active('dnom') title='Denominators'>dnom</button><button id='frac' class='feature' onclick=active('frac') title='Fractions'>frac</button><button id='pnum' class='feature' onclick=active('pnum') title='Proportional Figures'>pnum</button><button id='tnum' class='feature' onclick=active('tnum') title='Tabular Figures'>tnum</button><button id='kern' class='feature' onclick=active('kern') title='Kerning'>kern</button>
+	</div>
+</div>
+
+<p class="CopyrightFont">
+&#169; ParaType, 2013. All rights reserved.<br>All trademarks mentioned in this document are the trademarks or registered trademarks of their respective holders. You may reproduce and<br>distribute this document as long as you do not remove ParaType copyright information and do not make any changes in the document.<br>Русская панграмма из книги В. В. Шахиджаняна «Соло на клавиатуре»</p>	</div>
+
+</body>
+</html>

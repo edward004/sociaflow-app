@@ -1,14 +1,3 @@
-@font-face {
-	font-family: 'TildaSans,Arial,sans-serif';
-	src: url('../../../assets/fonts/TildaSans-Light/TildaSans-Light/TildaSans-Light.eot');
-	src:
-	     url('../../../assets/fonts/TildaSans-Light/TildaSans-Light/TildaSans-Light.eot?#iefix') format('embedded-opentype'),
-	     url('../../../assets/fonts/TildaSans-Light/TildaSans-Light/TildaSans-Light.woff2') format('woff2'),
-	     url('../../../assets/fonts/TildaSans-Light/TildaSans-Light/TildaSans-Light.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
 header {
   color: white;
   height: 80px;
@@ -27,13 +16,12 @@ header {
   .header-right {
     display: flex;
     align-items: center;
-    font-family: 'TildaSans,Arial,sans-serif';
+    font-family: 'TildaSansWebRegular', Arial, sans-serif;
 
     .nav-links {
       display: flex;
       gap: 16px;
       align-items: center;
-      font-family: 'TildaSansLight';
       font-weight: 400;
 
       a {

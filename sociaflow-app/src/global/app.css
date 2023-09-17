@@ -7,6 +7,14 @@
 
   Any global CSS variables should also be applied here.
 */
+@font-face {
+	font-family: 'TildaSansWebRegular';
+	src:
+		url('../assets/fonts/Tilda-Sans.web/tilda-sans_regular.woff2') format('woff2'),
+		url('../assets/fonts/Tilda-Sans.web/tilda-sans_regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 
 body {
   margin: 0px;
