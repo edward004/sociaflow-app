@@ -17,9 +17,9 @@ export class AppRoot {
             <div class="nav-links">
               <a href="#packages-section">Packages</a>
               <a href="#why-sociaflow-section">Why sociaflow?</a>
-              <a href="#about-us-section">About Us</a>
+              <a href="#about-us-section">About us</a>
             </div>
-            <login-btn />
+            <profile-menu />
           </div>
         </header>
 
