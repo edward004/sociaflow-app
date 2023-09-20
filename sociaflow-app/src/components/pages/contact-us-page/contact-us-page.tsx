@@ -7,7 +7,7 @@ import { Component, h } from '@stencil/core';
 export class ContactUsPage {
   render() {
     return (
-      <div class="container">
+      <div class="contact-us-container">
         <img src="../../../assets/images/home-page-container.png" alt="Description of Image" />
         <div class="overlay-text">
           <h1>

@@ -18,15 +18,17 @@ export class LoginButton {
 
   render() {
     const isLoggedIn = true;
-    const userName = "John Doe";
+    const userName = "JohnDoe";
 
     return (
       <div>
         {isLoggedIn ? (
-          <div class="profile-menu-logged-in">
-            <span><img src="../../assets/images/profile-user.png" alt="user profile" /></span>
-            <span class="profile-menu-name">{userName}</span>
-          </div>
+          <stencil-route-link url="/home">
+            <div class="profile-menu-logged-in">
+              <span><img src="../../assets/images/profile-user.png" alt="user profile" /></span>
+              <span class="profile-menu-name">{userName}</span>
+            </div>
+          </stencil-route-link>
         ) : (
           <stencil-route-link url="/login">
             <div class="profile-menu-logged-out">

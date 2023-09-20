@@ -6,7 +6,16 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class AppRoot {
+  isLoggedIn(): boolean {
+    // TODO: Implement your logic to check if the user is logged in.
+    return false;
+  }
+
   render() {
+    if (!this.isLoggedIn()) {
+      return <stencil-route-redirect url="/" />;
+    }
+
     return (
       <div>
         <header>
@@ -27,7 +36,7 @@ export class AppRoot {
           <stencil-router>
             <stencil-route-switch scrollTopOffset={0}>
               <stencil-route url="/" component="app-home" exact={true} />
-              <stencil-route url="/profile/:name" component="app-profile" />
+              <stencil-route url="/home" component="profile-home" />
               <stencil-route url="/login" component='login-page' />
               <stencil-route url="/about-us" component='about-us-page' />
               <stencil-route url="/packages" component='packages-page' />

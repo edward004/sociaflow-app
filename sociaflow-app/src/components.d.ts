@@ -24,6 +24,8 @@ export namespace Components {
     }
     interface PackagesPage {
     }
+    interface ProfileHome {
+    }
     interface ProfileMenu {
     }
     interface WhySociaflowPage {
@@ -78,6 +80,12 @@ declare global {
         prototype: HTMLPackagesPageElement;
         new (): HTMLPackagesPageElement;
     };
+    interface HTMLProfileHomeElement extends Components.ProfileHome, HTMLStencilElement {
+    }
+    var HTMLProfileHomeElement: {
+        prototype: HTMLProfileHomeElement;
+        new (): HTMLProfileHomeElement;
+    };
     interface HTMLProfileMenuElement extends Components.ProfileMenu, HTMLStencilElement {
     }
     var HTMLProfileMenuElement: {
@@ -99,6 +107,7 @@ declare global {
         "hamburger-menu": HTMLHamburgerMenuElement;
         "login-page": HTMLLoginPageElement;
         "packages-page": HTMLPackagesPageElement;
+        "profile-home": HTMLProfileHomeElement;
         "profile-menu": HTMLProfileMenuElement;
         "why-sociaflow-page": HTMLWhySociaflowPageElement;
     }
@@ -121,6 +130,8 @@ declare namespace LocalJSX {
     }
     interface PackagesPage {
     }
+    interface ProfileHome {
+    }
     interface ProfileMenu {
         "onLoginClicked"?: (event: CustomEvent<any>) => void;
     }
@@ -135,6 +146,7 @@ declare namespace LocalJSX {
         "hamburger-menu": HamburgerMenu;
         "login-page": LoginPage;
         "packages-page": PackagesPage;
+        "profile-home": ProfileHome;
         "profile-menu": ProfileMenu;
         "why-sociaflow-page": WhySociaflowPage;
     }
@@ -151,6 +163,7 @@ declare module "@stencil/core" {
             "hamburger-menu": LocalJSX.HamburgerMenu & JSXBase.HTMLAttributes<HTMLHamburgerMenuElement>;
             "login-page": LocalJSX.LoginPage & JSXBase.HTMLAttributes<HTMLLoginPageElement>;
             "packages-page": LocalJSX.PackagesPage & JSXBase.HTMLAttributes<HTMLPackagesPageElement>;
+            "profile-home": LocalJSX.ProfileHome & JSXBase.HTMLAttributes<HTMLProfileHomeElement>;
             "profile-menu": LocalJSX.ProfileMenu & JSXBase.HTMLAttributes<HTMLProfileMenuElement>;
             "why-sociaflow-page": LocalJSX.WhySociaflowPage & JSXBase.HTMLAttributes<HTMLWhySociaflowPageElement>;
         }
