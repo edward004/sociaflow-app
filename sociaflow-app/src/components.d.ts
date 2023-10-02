@@ -18,15 +18,17 @@ export namespace Components {
     }
     interface ContactUsPage {
     }
+    interface DashboardHome {
+    }
     interface HamburgerMenu {
     }
     interface LoginPage {
     }
     interface PackagesPage {
     }
-    interface ProfileHome {
-    }
     interface ProfileMenu {
+    }
+    interface UploadPage {
     }
     interface WhySociaflowPage {
     }
@@ -62,6 +64,12 @@ declare global {
         prototype: HTMLContactUsPageElement;
         new (): HTMLContactUsPageElement;
     };
+    interface HTMLDashboardHomeElement extends Components.DashboardHome, HTMLStencilElement {
+    }
+    var HTMLDashboardHomeElement: {
+        prototype: HTMLDashboardHomeElement;
+        new (): HTMLDashboardHomeElement;
+    };
     interface HTMLHamburgerMenuElement extends Components.HamburgerMenu, HTMLStencilElement {
     }
     var HTMLHamburgerMenuElement: {
@@ -80,17 +88,17 @@ declare global {
         prototype: HTMLPackagesPageElement;
         new (): HTMLPackagesPageElement;
     };
-    interface HTMLProfileHomeElement extends Components.ProfileHome, HTMLStencilElement {
-    }
-    var HTMLProfileHomeElement: {
-        prototype: HTMLProfileHomeElement;
-        new (): HTMLProfileHomeElement;
-    };
     interface HTMLProfileMenuElement extends Components.ProfileMenu, HTMLStencilElement {
     }
     var HTMLProfileMenuElement: {
         prototype: HTMLProfileMenuElement;
         new (): HTMLProfileMenuElement;
+    };
+    interface HTMLUploadPageElement extends Components.UploadPage, HTMLStencilElement {
+    }
+    var HTMLUploadPageElement: {
+        prototype: HTMLUploadPageElement;
+        new (): HTMLUploadPageElement;
     };
     interface HTMLWhySociaflowPageElement extends Components.WhySociaflowPage, HTMLStencilElement {
     }
@@ -104,11 +112,12 @@ declare global {
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
         "contact-us-page": HTMLContactUsPageElement;
+        "dashboard-home": HTMLDashboardHomeElement;
         "hamburger-menu": HTMLHamburgerMenuElement;
         "login-page": HTMLLoginPageElement;
         "packages-page": HTMLPackagesPageElement;
-        "profile-home": HTMLProfileHomeElement;
         "profile-menu": HTMLProfileMenuElement;
+        "upload-page": HTMLUploadPageElement;
         "why-sociaflow-page": HTMLWhySociaflowPageElement;
     }
 }
@@ -124,16 +133,18 @@ declare namespace LocalJSX {
     }
     interface ContactUsPage {
     }
+    interface DashboardHome {
+    }
     interface HamburgerMenu {
     }
     interface LoginPage {
     }
     interface PackagesPage {
     }
-    interface ProfileHome {
-    }
     interface ProfileMenu {
         "onLoginClicked"?: (event: CustomEvent<any>) => void;
+    }
+    interface UploadPage {
     }
     interface WhySociaflowPage {
     }
@@ -143,11 +154,12 @@ declare namespace LocalJSX {
         "app-profile": AppProfile;
         "app-root": AppRoot;
         "contact-us-page": ContactUsPage;
+        "dashboard-home": DashboardHome;
         "hamburger-menu": HamburgerMenu;
         "login-page": LoginPage;
         "packages-page": PackagesPage;
-        "profile-home": ProfileHome;
         "profile-menu": ProfileMenu;
+        "upload-page": UploadPage;
         "why-sociaflow-page": WhySociaflowPage;
     }
 }
@@ -160,11 +172,12 @@ declare module "@stencil/core" {
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "contact-us-page": LocalJSX.ContactUsPage & JSXBase.HTMLAttributes<HTMLContactUsPageElement>;
+            "dashboard-home": LocalJSX.DashboardHome & JSXBase.HTMLAttributes<HTMLDashboardHomeElement>;
             "hamburger-menu": LocalJSX.HamburgerMenu & JSXBase.HTMLAttributes<HTMLHamburgerMenuElement>;
             "login-page": LocalJSX.LoginPage & JSXBase.HTMLAttributes<HTMLLoginPageElement>;
             "packages-page": LocalJSX.PackagesPage & JSXBase.HTMLAttributes<HTMLPackagesPageElement>;
-            "profile-home": LocalJSX.ProfileHome & JSXBase.HTMLAttributes<HTMLProfileHomeElement>;
             "profile-menu": LocalJSX.ProfileMenu & JSXBase.HTMLAttributes<HTMLProfileMenuElement>;
+            "upload-page": LocalJSX.UploadPage & JSXBase.HTMLAttributes<HTMLUploadPageElement>;
             "why-sociaflow-page": LocalJSX.WhySociaflowPage & JSXBase.HTMLAttributes<HTMLWhySociaflowPageElement>;
         }
     }

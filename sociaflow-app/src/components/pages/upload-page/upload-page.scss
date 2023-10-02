@@ -1,0 +1,53 @@
+.title{
+  font-size: large;
+  font-weight: bold;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.filter-btn, .upload-btn {
+  font-size: 14px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  max-height: 50px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+#fileInput {
+  display: none;
+}
+
+
+
+.photo-grid {
+  line-height: 0;
+
+  -webkit-column-count: 4;
+  -webkit-column-gap:   1px;
+  -moz-column-count:    4;
+  -moz-column-gap:      1px;
+  column-count:         4;
+  column-gap:           1px;
+}
+
+.thumbnail {
+  padding: 1px;
+  border-radius: 1px;
+  width: 100% !important;
+  height: auto !important;
+}
